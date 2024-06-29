@@ -4,7 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a{
+    color: black;
+}
+a:hover
+{
+    color: blue;
+}
 /* Basic styling for header */
 .header {
     text-align: center;
@@ -61,10 +67,13 @@ section ul li {
 }
 
 /* Styling for footer */
+.footerText
+{
+    color:black;
+}
 footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px 0;
-    background-color: #333;
     color: #fff;
 }
