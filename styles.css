@@ -73,7 +73,7 @@ body.dark-mode .main-content {
   margin-bottom: 2px;
 }
 #profile h1 {
-  font-size: 1.8rem; /* Slightly smaller than before */
+  font-size: 1.3rem; /* Slightly smaller than before */
   margin-bottom: 8px;
   color: #5563de;
 }
@@ -83,7 +83,7 @@ main section {
   margin-bottom: 10px; /* Reduced spacing */
 }
 main section h2 {
-  font-size: 1.5rem;   /* Slightly smaller heading */
+  font-size: 1.15rem;   /* Slightly smaller heading */
   margin-bottom: 8px;
   color: #5563de;
   border-bottom: 2px solid #74abe2;
@@ -121,6 +121,12 @@ section ul {
 }
 section ul li {
   margin-bottom: 6px;
+}
+
+/* Dark Mode override: make Linux icon white */
+body.dark-mode i.devicon-linux-plain,
+body.dark-mode i.devicon-linux-plain.colored {
+  color: #ffffff !important;
 }
 
 /* Fade-In Sections */
