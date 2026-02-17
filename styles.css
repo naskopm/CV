@@ -190,6 +190,12 @@ footer a:hover {
   }
 }
 /* Basic link styling */
+@media(max-width: 800px){
+  .skills {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
 a {
   color: #5563de;              /* Primary link color */
   text-decoration: none;       /* Remove underline by default */
