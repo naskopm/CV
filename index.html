@@ -1,106 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV - Atanas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CV - Atanas Petrov Margaritov</title>
+  
+  <!-- Devicon for programming icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  
+  <!-- Font Awesome for additional icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="header">
-        <img src="CV.jpg" alt="Atanas Profile Photo">
+  <!-- Dark Mode Toggle Button (hidden when printing) -->
+  <button id="dark-mode-toggle" class="dark-mode-toggle" title="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </button>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Profile Section -->
+    <section id="profile" class="fade-in-section">
+      <div class="profile-container">
+        <img src="CV.jpg" alt="Atanas Profile Photo" class="profile-img" />
         <h1>Atanas Petrov Margaritov</h1>
-        <hr>
-    </header>
+      </div>
+      <hr />
+    </section>
     
-    <div class="main-content">
-        <section id="about-me">
-            <h2>About Me</h2>
-            <hr>
-            <p>I was lucky enough to discover my passion for computers from a young age, therefore I
-                had a career orientation very early on. By finding an internship in IT I hope to turn my long term
-                career plan into reality. So far I possess these skills:
-                JavaScript, HTML, CSS, Linux,  a good understanding of C# including OOP, basic knowledge in
-                PostgresSQL and very good level of English.
-                In my free time I like to go out with friends, listen to music and of course tinker with
-                computers. </p>
-        </section>
-            <section id="skills">
-            <h2>Skills</h2>
-            <hr>
-            <ul>
-                <li>
-                  C# 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo" style="vertical-align: middle;" width="30" height="30">
-                </li>
-                <br>
-                <li>
-                  Linux 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux Logo" style="vertical-align: middle;" width="20" height="20">
-                </li>
-                <br>
-                <li>
-                  Cybersecurity 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" alt="Kali Linux Logo" style="vertical-align: middle;" width="20" height="20">
-                  </li>
-                  <br>
-                <li>
-                  HTML 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" style="vertical-align: middle;" width="20" height="20">
-                </li>
-                <br>
-                <li>
-                  CSS 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" style="vertical-align: middle;" width="20" height="20">
-                </li>
-                <br>
-                <li>
-                  JavaScript 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" style="vertical-align: middle;" width="20" height="20">
-                </li>
-                <br>
-                <li>
-                  SQL 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo" style="vertical-align: middle;" width="40" height="20">
-                </li>
-              </ul>
-              
-              
-        
-        </section>
-        <section id="personal-information">
-            <h2>Personal Information</h2>
-            <hr>
-            <ul>
-                <li>Name: Atanas Petrov Margaritov</li>
-                <li>Email: apmargaritov19@gmail.com</li>
-            </ul>
-        </section>
-            
-        <section id="education">
-            <h2>Education</h2>
-            <hr>
-            <ul>
-                <li>High school diploma "Geo Milev Language school (Dobrich)"</li>
-                <li>Currently persuing a digree in Cybersecurity in the Technical University of Varna</li>
-            </ul>
-        </section>
+    <!-- About Me -->
+    <section id="about-me" class="fade-in-section">
+      <h2>About Me</h2>
+      <hr />
+      <p>
+        I discovered my passion for computers at a young age, which set me on my career path early. My current skills include Cybersecurity, AI, Python, Web Development, Linux and excellent English proficiency. In my free time, I enjoy hanging out with friends, listening to music, and of course tinkering with computers.
+      </p>
+    </section>
 
-        <section id="work-experience">
-            <h2>Certificates</h2>
-            <hr>
-            <ul>
-                <li>Web Development and Game Development by Telerik School Academy</li>
-                <li>Cambridge English Advanced certificate (level C1)</li>
-                <li>Certificates in Cybersecurity</li>
-                <li>Softuni - Reconnaissance Fundamentals 2023</li>
-                <li>Softuni - System and Network Compromising 2024</li>
-                <li>Softuni - Compromising Platforms 2024</li>
-            </ul>
-        </section>
-    </div>
-    <hr>
-    <footer>
-    </footer>
+    <!-- Skills -->
+    <!-- Skills (ordered: AI, Cybersecurity, Python, and C#) -->
+    <section id="skills" class="fade-in-section">
+      <h2>Skills</h2>
+      <hr />
+      <ul>
+        <li>
+          <i class="fas fa-brain"></i>
+          AI
+        </li>
+        <li class="skills" style="margin-left: -5%;">
+          <i class="fas fa-shield-halved"></i>
+          Cybersecurity
+        </li>
+        <li class="skills" style="padding-left: 15%;">
+          <i class="devicon-python-plain colored"></i>
+          Python
+        </li>
+        <li class="skills" style="padding-left: 10%;">
+          <i class="devicon-linux-plain colored"></i>
+          Linux
+        </li>
+        <li class="skills">
+          <i class="devicon-html5-plain colored"></i>
+          Web Development
+        </li>
+      </ul>
+    </section>
+
+    <!-- Personal Information -->
+    <section id="personal-information" class="fade-in-section">
+      <h2>Personal Information</h2>
+      <hr />
+      <ul>
+        <li>Name: Atanas Petrov Margaritov</li>
+        <li>Email: apmargaritov19@gmail.com</li>
+        <li>Phone: 0897257490</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="fade-in-section">
+      <h2>Education</h2>
+      <hr />
+      <ul>
+        <li>High school diploma: Geo Milev Language School (Dobrich)</li>
+        <li>Third-year Bachelor’s student in Artificial Intelligence at the Technical University of Varna, expected to graduate in 2027.</li>
+      </ul>
+    </section>
+
+    <!-- Internship -->
+    <section id="internship" class="fade-in-section">
+      <h2>Internship</h2>
+      <hr />
+      <ul>
+        <li>
+          Completed internship at TNT Robotics
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="fade-in-section">
+      <h2>Projects</h2>
+      <hr />
+      <ul>
+        <li>
+          <a href="https://tnt.bg" target="_blank" rel="noopener noreferrer">tnt.bg</a> Developed and deployed the TNT Robotics website featuring an interactive chatbot that manages key website features.
+        </li>
+        <li>PasswordDiffusion — a diffusion-based language model for generating password wordlists.</li>
+      </ul>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates" class="fade-in-section">
+      <h2>Certificates</h2>
+      <hr />
+      <ul>
+        <li>
+          <strong>First‐Place Certificate, Student Scientific Session</strong> — Technical University of Varna – <em>PasswordDiffusion</em> project
+        </li>
+        <li>Cambridge English Advanced (Level C1)</li>
+        <li> <b>Cybersecurity Certificates</b></li>
+        <li>
+          <a href="https://softuni.bg/certificates/details/201008/5ad7492a" target="_blank">
+            Softuni - Reconnaissance Fundamentals 2023
+          </a>
+        </li>
+        <li>
+          <a href="https://softuni.bg/certificates/details/208208/bc994a38" target="_blank">
+            Softuni - System &amp; Network Compromising 2024
+          </a>
+        </li>
+        <li>
+          <a href="https://softuni.bg/certificates/details/216319/780be002" target="_blank">
+            Softuni - Compromising Platforms 2024
+          </a>
+        </li>
+      </ul>
+      
+      <ul>
+        <li><b>AI Certificates</b></li>
+        <li>
+          <a href="https://softuni.bg/certificates/details/230530/c00265c6" target="_blank">
+            Softuni - Machine Learning 2024
+          </a>
+        </li>
+        <li>
+          <a href="https://softuni.bg/certificates/details/238965/b198b8ca" target="_blank">
+            Softuni - Deep Learning 2024
+          </a>
+        </li>
+      </ul>
+
+    </section>
+
+    <!-- AI Certificates -->  </main>
+
+  <!-- Footer (visible in print to fill page) -->
+
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
+

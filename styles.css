@@ -1,87 +1,223 @@
-/* Reset default margin and padding */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a{
-    color: black;
-}
-a:hover
-{
-    color: blue;
-}
-/* Basic styling for header */
-.header {
-    text-align: center;
-    margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header img {
-    width: 120px; /* Adjust size as needed */
-    border-radius: 50%; /* Makes the image round */
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.header h1 {
-    margin-bottom: 5px;
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
 }
 
-.header p {
-    font-style: italic;
-    color: #555;
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+  z-index: 1001;
+}
+body.dark-mode .dark-mode-toggle {
+  color: #f0f0f0;
+}
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
 }
 
-/* Styling for main content sections */
+/* Main Content */
 .main-content {
-    width: 100%;
-    max-width: 800px; /* Limit width to A4 size or adjust as needed */
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 900px;
+  background: #fff;
+  margin: 40px auto 20px; /* Reduced top/bottom margin */
+  padding: 20px;          /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Styling for sections */
-section {
-    margin-bottom: 30px;
+body.dark-mode .main-content {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
 }
 
-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+/* Profile Section */
+#profile .profile-container {
+  text-align: center;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #5563de;
+  margin-bottom: 2px;
+}
+#profile h1 {
+  font-size: 1.3rem; /* Slightly smaller than before */
+  margin-bottom: 8px;
+  color: #5563de;
 }
 
-section hr {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: none;
-    height: 3px;
-    background-color: #ddd;
+/* Sections */
+main section {
+  margin-bottom: 10px; /* Reduced spacing */
+}
+main section h2 {
+  font-size: 1.15rem;   /* Slightly smaller heading */
+  margin-bottom: 8px;
+  color: #5563de;
+  border-bottom: 2px solid #74abe2;
+  padding-bottom: 2px;
+  transition: color 0.3s;
+}
+body.dark-mode main section h2 {
+  color: #74abe2;
+}
+main section p,
+main section ul {
+  margin-top: 6px;
 }
 
+/* Skills Section Grid */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+#skills li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+#skills li i {
+  font-size: 1.3rem; /* Slightly smaller icons */
+}
+
+/* Lists */
 section ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
-
 section ul li {
-    margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
-/* Styling for footer */
-.footerText
-{
-    color:black;
+/* Dark Mode override: make Linux icon white */
+body.dark-mode i.devicon-linux-plain,
+body.dark-mode i.devicon-linux-plain.colored {
+  color: #ffffff !important;
 }
+
+/* Fade-In Sections */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
-    color: #fff;
+  text-align: center;
+  padding: 2px; /* Slightly smaller footer padding */
+  background-color: #5563de;
+  color: #fff;
+  margin-top: 2px;
 }
-ul {
-    list-style-type: none;
-    padding: 0;
+footer a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #dcdcdc;
 }
 
-li {
-    margin-bottom: 10px; /* Adjust spacing as needed */
+/* Print Styles */
+@page {
+  size: A4 portrait;
+  margin: 8mm;
 }
+@media print {
+  body {
+    font-size: 10.5pt; /* Enough to fill but not spill */
+    line-height: 1.2;
+  }
+  .main-content {
+    max-width: none !important;
+    margin: 0;
+    padding: 8mm;
+    box-shadow: none;
+  }
+  .fade-in-section {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .dark-mode-toggle {
+    display: none;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .main-content {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+}
+/* Basic link styling */
+@media(max-width: 800px){
+  .skills {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+a {
+  color: #5563de;              /* Primary link color */
+  text-decoration: none;       /* Remove underline by default */
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #333;                 /* Darken on hover */
+  text-decoration: underline;  /* Underline on hover */
+}
+
+/* If you want a distinct style for certificate links only, 
+   you can wrap them in a class, e.g.:
+   a.certificate-link { color: #...; } 
+   Then apply that class in the HTML:
+   <a href="..." class="certificate-link">...</a>
+*/
+
+/* Other existing styles from your CV ... */
+body {
+  font-family: 'Roboto', sans-serif;
+  /* etc. */
+}
+
+/* Remainder of your existing CV styling goes here */
