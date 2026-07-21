@@ -14,6 +14,7 @@ body {
   background-color: #f4f7f9;
   color: #333;
   line-height: 1.6;
+  font-size: 1.1rem; /* Увеличен основен размер на шрифта */
   scroll-behavior: smooth;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -73,21 +74,30 @@ body.dark-mode .main-content {
   margin-bottom: 2px;
 }
 #profile h1 {
+<<<<<<< Updated upstream
   font-size: 1.8rem; /* Slightly smaller than before */
+=======
+  font-size: 2.2rem; /* Значително по-голямо заглавие */
+>>>>>>> Stashed changes
   margin-bottom: 8px;
   color: #5563de;
 }
 
 /* Sections */
 main section {
-  margin-bottom: 10px; /* Reduced spacing */
+  margin-bottom: 20px; /* Повече въздух между секциите */
 }
 main section h2 {
+<<<<<<< Updated upstream
   font-size: 1.5rem;   /* Slightly smaller heading */
   margin-bottom: 8px;
+=======
+  font-size: 1.5rem;   /* По-големи подзаглавия */
+  margin-bottom: 12px;
+>>>>>>> Stashed changes
   color: #5563de;
   border-bottom: 2px solid #74abe2;
-  padding-bottom: 2px;
+  padding-bottom: 6px;
   transition: color 0.3s;
 }
 body.dark-mode main section h2 {
@@ -97,21 +107,28 @@ main section p,
 main section ul {
   margin-top: 6px;
 }
-
+li {
+ font-size: 1.1rem; /* Уголемен текст в списъците */
+ margin-bottom: 8px; /* Разстояние между редовете */
+}
 /* Skills Section Grid */
 #skills ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
+  display: flex; /* Промяна на flexbox, за да може всичко да е на един ред */
+  justify-content: space-between; /* Разпределя елементите равномерно на реда */
+  flex-wrap: nowrap; /* Гарантира, че всичко остава на един ред (няма да пренася) */
+  gap: 10px; /* Минимално разстояние, ако мястото се стесни */
 }
 #skills li {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px; /* Леко намалено разстояние между икона и текст, за да се съберат */
   font-weight: 500;
+  white-space: nowrap; /* Не позволява на текста на умението да се пренася на нов ред */
 }
 #skills li i {
-  font-size: 1.3rem; /* Slightly smaller icons */
+  font-size: 1.5rem; /* Намалени икони */
+  width: auto; /* Позволяваме на иконката да заема само колкото ѝ трябва */
+  text-align: center; /* Центриране на иконката */
 }
 
 /* Lists */
@@ -147,6 +164,10 @@ footer a {
   text-decoration: underline;
   transition: color 0.3s;
 }
+#about-me {
+  font-size: 1.15rem; /* Увеличен размер на шрифта в "За мен" */
+  margin-top: 10px;
+}
 footer a:hover {
   color: #dcdcdc;
 }
@@ -154,18 +175,45 @@ footer a:hover {
 /* Print Styles */
 @page {
   size: A4 portrait;
-  margin: 8mm;
+  margin: 4mm;
 }
 @media print {
   body {
-    font-size: 10.5pt; /* Enough to fill but not spill */
-    line-height: 1.2;
+    font-size: 9pt;
+    line-height: 1.08;
   }
   .main-content {
     max-width: none !important;
     margin: 0;
-    padding: 8mm;
+    padding: 4mm;
     box-shadow: none;
+  }
+  main section {
+    margin-bottom: 6px;
+  }
+  main section h2 {
+    font-size: 12pt;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+  }
+  #profile h1 {
+    font-size: 18pt;
+    margin-bottom: 4px;
+  }
+  .profile-img {
+    width: 70px;
+    height: 70px;
+  }
+  #about-me {
+    font-size: 9pt;
+    margin-top: 4px;
+  }
+  li {
+    font-size: 9pt;
+    margin-bottom: 2px;
+  }
+  section ul li {
+    margin-bottom: 2px;
   }
   .fade-in-section {
     opacity: 1 !important;
@@ -173,6 +221,12 @@ footer a:hover {
   }
   .dark-mode-toggle {
     display: none;
+  }
+  #skills ul {
+    gap: 6px;
+  }
+  #skills li i {
+    font-size: 1.1rem;
   }
 }
 
